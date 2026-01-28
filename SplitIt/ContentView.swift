@@ -22,11 +22,22 @@ struct ContentView: View {
                     Section {
                         TextField("Amount: ", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .keyboardType(.decimalPad)
+                    }
+                    Section("Select a tip percentage") {
+                        Picker("Tip Percentage", selection: $tipPercentage) {
+                            ForEach(tipPercentages, id: \.self) {
+                                Text($0, format: .percent)
+                            }
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                    Section {
                         Picker("Number of People", selection: $numberOfPeople) {
                             ForEach(2..<100) {
                                 Text("\($0) People")
                             }
                             .pickerStyle(.navigationLink)
+                            
                         }
                     }
                 }
