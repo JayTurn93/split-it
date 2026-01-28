@@ -22,10 +22,16 @@ struct ContentView: View {
                     Section {
                         TextField("Amount: ", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .keyboardType(.decimalPad)
+                        Picker("Number of People", selection: $numberOfPeople) {
+                            ForEach(2..<100) {
+                                Text("\($0) People")
+                            }
+                            .pickerStyle(.navigationLink)
+                        }
                     }
                 }
                 
-                    .navigationTitle(Text("Start"))
+                    .navigationTitle(Text("Split It"))
                 }
                 
             }
