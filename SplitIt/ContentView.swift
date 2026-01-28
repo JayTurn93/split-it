@@ -12,6 +12,16 @@ struct ContentView: View {
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 15
     let tipPercentages = [10, 15, 20, 25, 30]
+    var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2) //offsets our selections due to not including 0 and 1.
+        let tipSelection = Double(tipPercentage)
+        
+        let tipValue = billTotal / 100 * tipSelection
+        let grandTotal = billTotal + tipValue
+        let perPerson = grandTotal / peopleCount
+        
+        return perPerson
+    }
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -39,6 +49,9 @@ struct ContentView: View {
                             .pickerStyle(.navigationLink)
                             
                         }
+                    }
+                    Section ("Per Person") {
+                        Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
                 }
                 
