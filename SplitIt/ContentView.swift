@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var buttonTaps = 0
-    let students = ["Harry", "Hermione", "Ron"]
-    @State private var selectedStudent = "Harry"
+    @State private var billTotal = 0.0
+    @State private var numberOfPeople = 2
+    @State private var tipPercentage = 15
+    let tipPercentages = [10, 15, 20, 25, 30]
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,28 +20,14 @@ struct ContentView: View {
             NavigationStack {
                 Form {
                     Section {
-                        Text("Hello World")
-                        Text("Hello World")
-                    }
-                    
-                    Button("Button Taps: \(buttonTaps)") {
-                        self.buttonTaps += 1
-                    }
-                    Section{
-                        ForEach (0..<5) {
-                            Text("Row \($0)")
-                        }
-                      }
-                    Section {
-                        Picker("Select you student: ", selection: $selectedStudent){
-                            ForEach (students, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                    }
+                        TextField("Amount: ", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                            .keyboardType(.decimalPad)
                     }
                 }
-                .navigationTitle(Text("Start"))
+                
+                    .navigationTitle(Text("Start"))
+                }
+                
             }
             .padding()
         }
