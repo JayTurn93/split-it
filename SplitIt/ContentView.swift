@@ -22,6 +22,11 @@ struct ContentView: View {
         
         return perPerson
     }
+    var billWithTip: Double {
+        let tipSelection = Double(tipPercentage)
+        let tipValue = billTotal / 100 * tipSelection
+        return billTotal + tipValue
+    }
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -29,17 +34,17 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             NavigationStack {
                 Form {
-                    Section {
-                        TextField("Amount: ", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Section ("Bill Amount") {
+                        TextField("Amount", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .keyboardType(.decimalPad)
                     }
                     Section("Select a tip percentage") {
                         Picker("Tip Percentage", selection: $tipPercentage) {
-                            ForEach(tipPercentages, id: \.self) {
+                            ForEach(1...100, id: \.self) {
                                 Text($0, format: .percent)
                             }
                         }
-                        .pickerStyle(.segmented)
+                        .pickerStyle(.navigationLink)
                     }
                     Section {
                         Picker("Number of People", selection: $numberOfPeople) {
@@ -50,8 +55,11 @@ struct ContentView: View {
                             
                         }
                     }
-                    Section ("Per Person") {
+                    Section ("Per Person"){
                         Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    }
+                    Section ("Bill Total") {
+                        Text(billWithTip, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                     }
                 }
                 
