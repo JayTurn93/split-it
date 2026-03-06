@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
+		443775072F5A793700E70CA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 441ACB672F29B9EF00A42BAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 441ACB6E2F29B9EF00A42BAA;
+			remoteInfo = SplitIt;
+		};
 		44966CC82F2B3FAE00F2949F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 441ACB672F29B9EF00A42BAA /* Project object */;
@@ -25,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		441ACB6F2F29B9EF00A42BAA /* SplitIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		443775012F5A793700E70CA6 /* SplitItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44966CC42F2B3FAE00F2949F /* SplitItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44966CD12F2B3FD000F2949F /* SplitItTestsUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplitItTestsUI.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -35,20 +43,22 @@
 			path = SplitIt;
 			sourceTree = "<group>";
 		};
-		44966CC52F2B3FAE00F2949F /* SplitItTests */ = {
+		443775022F5A793700E70CA6 /* SplitItUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SplitItTests;
-			sourceTree = "<group>";
-		};
-		44966CD22F2B3FD000F2949F /* SplitItTestsUI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SplitItTestsUI;
+			path = SplitItUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		441ACB6C2F29B9EF00A42BAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443774FE2F5A793700E70CA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				441ACB712F29B9EF00A42BAA /* SplitIt */,
-				44966CC52F2B3FAE00F2949F /* SplitItTests */,
-				44966CD22F2B3FD000F2949F /* SplitItTestsUI */,
+				443775022F5A793700E70CA6 /* SplitItUITests */,
 				441ACB702F29B9EF00A42BAA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +97,7 @@
 				441ACB6F2F29B9EF00A42BAA /* SplitIt.app */,
 				44966CC42F2B3FAE00F2949F /* SplitItTests.xctest */,
 				44966CD12F2B3FD000F2949F /* SplitItTestsUI.xctest */,
+				443775012F5A793700E70CA6 /* SplitItUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +127,29 @@
 			productReference = 441ACB6F2F29B9EF00A42BAA /* SplitIt.app */;
 			productType = "com.apple.product-type.application";
 		};
+		443775002F5A793700E70CA6 /* SplitItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443775092F5A793700E70CA6 /* Build configuration list for PBXNativeTarget "SplitItUITests" */;
+			buildPhases = (
+				443774FD2F5A793700E70CA6 /* Sources */,
+				443774FE2F5A793700E70CA6 /* Frameworks */,
+				443774FF2F5A793700E70CA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				443775082F5A793700E70CA6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				443775022F5A793700E70CA6 /* SplitItUITests */,
+			);
+			name = SplitItUITests;
+			packageProductDependencies = (
+			);
+			productName = SplitItUITests;
+			productReference = 443775012F5A793700E70CA6 /* SplitItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		44966CC32F2B3FAE00F2949F /* SplitItTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44966CCC2F2B3FAE00F2949F /* Build configuration list for PBXNativeTarget "SplitItTests" */;
@@ -129,9 +162,6 @@
 			);
 			dependencies = (
 				44966CC92F2B3FAE00F2949F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				44966CC52F2B3FAE00F2949F /* SplitItTests */,
 			);
 			name = SplitItTests;
 			packageProductDependencies = (
@@ -153,9 +183,6 @@
 			dependencies = (
 				44966CD82F2B3FD000F2949F /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				44966CD22F2B3FD000F2949F /* SplitItTestsUI */,
-			);
 			name = SplitItTestsUI;
 			packageProductDependencies = (
 			);
@@ -175,6 +202,10 @@
 				TargetAttributes = {
 					441ACB6E2F29B9EF00A42BAA = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					443775002F5A793700E70CA6 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 441ACB6E2F29B9EF00A42BAA;
 					};
 					44966CC32F2B3FAE00F2949F = {
 						CreatedOnToolsVersion = 26.2;
@@ -203,12 +234,20 @@
 				441ACB6E2F29B9EF00A42BAA /* SplitIt */,
 				44966CC32F2B3FAE00F2949F /* SplitItTests */,
 				44966CD02F2B3FD000F2949F /* SplitItTestsUI */,
+				443775002F5A793700E70CA6 /* SplitItUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		441ACB6D2F29B9EF00A42BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		443774FF2F5A793700E70CA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +278,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		443774FD2F5A793700E70CA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44966CC02F2B3FAE00F2949F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +302,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		443775082F5A793700E70CA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 441ACB6E2F29B9EF00A42BAA /* SplitIt */;
+			targetProxy = 443775072F5A793700E70CA6 /* PBXContainerItemProxy */;
+		};
 		44966CC92F2B3FAE00F2949F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 441ACB6E2F29B9EF00A42BAA /* SplitIt */;
@@ -450,6 +501,44 @@
 			};
 			name = Release;
 		};
+		4437750A2F5A793700E70CA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Jalysa.Turner.SplitItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SplitIt;
+			};
+			name = Debug;
+		};
+		4437750B2F5A793700E70CA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.Jalysa.Turner.SplitItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SplitIt;
+			};
+			name = Release;
+		};
 		44966CCA2F2B3FAE00F2949F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -545,6 +634,15 @@
 			buildConfigurations = (
 				441ACB7B2F29B9F100A42BAA /* Debug */,
 				441ACB7C2F29B9F100A42BAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		443775092F5A793700E70CA6 /* Build configuration list for PBXNativeTarget "SplitItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4437750A2F5A793700E70CA6 /* Debug */,
+				4437750B2F5A793700E70CA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -39,6 +39,7 @@ struct ContentView: View {
                         TextField("Amount", value: $billTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
                             .keyboardType(.decimalPad)
                     }
+                    
                     Section("Select a tip percentage") {
                         Picker("Tip Percentage", selection: $tipPercentage) {
                             ForEach(0...100, id: \.self) {

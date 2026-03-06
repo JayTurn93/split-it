@@ -1,13 +1,13 @@
 //
-//  SplitItTestsUILaunchTests.swift
-//  SplitItTestsUI
+//  SplitItUITestsLaunchTests.swift
+//  SplitItUITests
 //
-//  Created by Jalysa Turner on 1/28/26.
+//  Created by Jalysa Turner on 3/5/26.
 //
 
 import XCTest
 
-final class SplitItTestsUILaunchTests: XCTestCase {
+final class SplitItUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
